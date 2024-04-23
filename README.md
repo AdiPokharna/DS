@@ -6,11 +6,11 @@
         sudo apt-get remove openjdk*
         sudo apt update
         sudo apt install openjdk-8-jdk openjdk-8-jre
-        java -version // it should have version start with 1.8... etc 
+        java -version //It should have a version starting with 1.8... etc 
     
 3. Download [MPJ Express](https://sourceforge.net/projects/mpjexpress/files/releases/mpj-v0_44.tar.gz/download) & extract it in Downloads         
  
-4. Install Apache Netbeans (It will be Easier to work with Netbeans on Windows than Ubuntu)      
+4. Install Apache Netbeans (It will be easier to work with Netbeans on Windows than Ubuntu)      
    Download [NetBeans 8.2 With Glassfish 4.1.1](https://drive.google.com/file/d/1Cg3Tn8ALQlrFyEGO3e6lH4h8cvECDylu/view?usp=sharing)
 
                      To Install :
@@ -40,9 +40,18 @@ Terminal 3:
 
 Terminal 4:
 
-    java AddClient 127.0.0.1 5 8  // The Number of Arguments are Specified after localhost address.
+    java AddClient 127.0.0.1 5 8  // The Number of Arguments is Specified after the localhost address.
 
-### Assignment 2: (if You are getting error in this or next assignment then issue is with Java Version it works with Java 8 only as it is depreciated after Java 8 :)     
+### Assignment 2 MPI: (Specify Path Properly Don't Just Copy Paste the Command ;)
+
+Terminal:
+
+    export MPJ_HOME=/home/ubuntu/Downloads/mpj-v0_44
+    export PATH=$MPJ_HOME/bin:$PATH
+    javac -cp $MPJ_HOME/lib/mpj.jar ArrSum.java
+    $MPJ_HOME/bin/mpjrun.sh -np 4 ArrSum  // Specified value of n=4 here 
+
+### Assignment 3 CORBA: (If you are getting errors in this or the next assignment then the issue is with Java Version it works with Java 8 only as it is depreciated after Java 8 :)     
 Terminal 1:
 
     idlj -fall ReverseModule.idl
@@ -54,14 +63,6 @@ Terminal 2:
 
     java ReverseClient -ORBInitialPort 1056 -ORBInitialHost localhost
 
-### Assignment 3: (Specify Path Properly Don't Just Copy Paste the Command ;)
-
-Terminal:
-
-    export MPJ_HOME=/home/ubuntu/Downloads/mpj-v0_44
-    export PATH=$MPJ_HOME/bin:$PATH
-    javac -cp $MPJ_HOME/lib/mpj.jar ArrSum.java
-    $MPJ_HOME/bin/mpjrun.sh -np 4 ArrSum  // Specified value of n=4 here 
 
 ### Assignment 4:
 
@@ -75,7 +76,7 @@ Terminal 2:
     python server.py
 
  ### Assignment 5:
- Commands to run Berkeley algo in java
+ Commands to run Berkeley algo in Java
 
 Terminal 1
 javac *.java
@@ -100,7 +101,7 @@ Terminal
     javac Tring.java
     java Tring
 
-### Assignmnet 6:
+### Assignment 6:
 
 Terminal
 
@@ -111,7 +112,7 @@ Terminal
     
 ### Assignment 7:
 
-   [Youtube tutotial - 1](https://www.youtube.com/watch?v=ASd1S-_HLWw&list=PL1ysxTqY226jlhxh31xMYS72CqC5_vodG&index=2) 
+   [Youtube tutorial - 1](https://www.youtube.com/watch?v=ASd1S-_HLWw&list=PL1ysxTqY226jlhxh31xMYS72CqC5_vodG&index=2) 
    
    [Youtube tutorial - 2](https://www.youtube.com/watch?v=0z-HvSfr-M4)
     
