@@ -75,7 +75,7 @@ Terminal 2:
 
     python server.py
 
- ### Assignment 5:
+ ### Assignment 4:
  Commands to run Berkeley algo in Java
 
 Terminal 1
